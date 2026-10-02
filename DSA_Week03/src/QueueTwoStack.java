@@ -7,7 +7,7 @@ public class QueueTwoStack {
 
     public void Enqueue(int x){
 
-            stack_1.push(x);
+            stack_1.push(x); // cứ có enqueue là push hết vào stack1 không quan tâm stack2 có hay ko có phần tử.
     }
     public static void Move(Stack<Integer> stack1, Stack<Integer> stack2){
 
@@ -21,7 +21,7 @@ public class QueueTwoStack {
 
         if (stack_2.isEmpty()){
 
-            Move(stack_1,stack_2);
+            Move(stack_1,stack_2); // pop đến khi nào hết phần tử trong stack2 thì move phần tử từ stack1 qua.
         }
 
         stack_2.pop();
@@ -31,7 +31,7 @@ public class QueueTwoStack {
 
         if (stack_2.isEmpty()){
 
-            Move(stack_1,stack_2);
+            Move(stack_1,stack_2);//nếu stack2 bị Dequeue hết thì lấy phần từ từ stack1 qua thì mới print được
         }
 
         System.out.println(stack_2.peek());
