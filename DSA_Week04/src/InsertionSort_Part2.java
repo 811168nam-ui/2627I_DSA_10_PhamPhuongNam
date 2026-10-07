@@ -1,24 +1,25 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
-public class InsertionSort {
+public class InsertionSort_Part2 {
     public static void insertion(int n, int[] arr){
 
-        int target = arr[n-1];
+        for (int k = 1; k < n; k++ ){
 
-        int i = n - 2;
+            int target = arr[k];
 
-        while (i >= 0 && arr[i] > target){
+            int i = k - 1;
 
-            arr[i + 1] = arr[i];
+            while (i >= 0 && arr[i] > target){
+
+                arr[i + 1] = arr[i];
+
+                i--;
+            }
+            arr[i + 1] = target;
 
             Print(arr);
-
-            i--;
         }
-        arr[i + 1] = target;
 
-        Print(arr);
     }
     public static void Print(int[] array){
         for (int i = 0; i < array.length; i++){
